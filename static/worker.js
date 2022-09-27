@@ -1,0 +1,1 @@
+postMessage("I'm working before postMessage('ali')."),onmessage=function(e){startReader(e.data),postMessage("Hi")};const startReader=e=>{},startReading=async e=>{for(;e.readable;){const t=e.readable.getReader();try{for(;;){var{value:a,done:s}=await t.read();if(s){t.releaseLock();break}a&&postMessage(a)}}catch(e){}}};
