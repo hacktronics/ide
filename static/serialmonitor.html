@@ -73,12 +73,15 @@
       window.addEventListener('DOMContentLoaded', (event) => {
         fetch('http://localhost:3000/serialports').then(resp => resp.json())
           .then(data => {
-            console.log(serialPort.length);
             while(serialPort.length > 0) {
               serialPort.remove(0);
             }
             data.sort().forEach(port => {
-              serialPort.add(new Option(port, port), null);
+              if (port.startsWith('tty')) {
+                serialPort.add(new Option('/dev/' + port, port), null);
+              } else {
+                serialPort.add(new Option(port, port), null);
+              }
             });
           });
       });</script></body></html>
