@@ -2,7 +2,7 @@
   "name": "Avinya Board",
   "version": "0.0.1.0",
   "new_install_prompt_erase": true,
-  "new_install_improv_wait_time": 240,
+  "new_install_improv_wait_time": 120,
   "builds": [
     {
       "chipFamily": "ESP32",
