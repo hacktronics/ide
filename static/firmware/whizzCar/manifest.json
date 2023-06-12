@@ -1,0 +1,14 @@
+{
+  "name": "Whizz Car",
+  "version": "0.0.1.0",
+  "new_install_prompt_erase": true,
+  "new_install_improv_wait_time": 300,
+  "builds": [
+    {
+      "chipFamily": "ESP8266",
+      "parts": [
+        { "path": "firmware.bin", "offset": 0 }
+      ]
+    }
+  ]
+}
